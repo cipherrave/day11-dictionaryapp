@@ -9,23 +9,65 @@
   </head>
   <body>
     <div>
-      <h2>Dictionary</h2>
-      <div>
-        <input type="text" placeholder="Enter the word" id="word" />
-        <button id="search">Search</button>
-      </div>
-
-      <div>
-        <div id="partOfSpeechDiv" class="hidden">
-          <h2 id="partOfSpeechHeader"></h2>
-          <p id="partOfSpeechPara"></p>
+      <h1>📕Dictionary</h1>
+      <div class="card">
+        <div class="searchInput">
+          <input type="text" placeholder="Enter the word" id="word" />
+          <button id="search">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              />
+            </svg>
+          </button>
         </div>
-
-        <div id="meaningDiv">
-          <h2 id="meaningHeader"></h2>
-        </div>
-        <div id="audio" class="hidden"></div>
       </div>
+    </div>
+    <div class="card" id="cardResult" style="display: none">
+      <h1
+        id="searchedWord"
+        style="text-transform: capitalize; font-size: 40px"
+      ></h1>
+      <br />
+      <div class="solidline"></div>
+      <br />
+      <div id="partOfSpeechDiv">
+        <h2 id="partOfSpeechHeader"></h2>
+        <br />
+        <p
+          id="partOfSpeechPara"
+          style="font-style: italic; font-size: 20px"
+        ></p>
+        <br />
+        <div class="solidline"></div>
+      </div>
+      <br />
+      <div id="audio"></div>
+      <br />
+      <div class="solidline"></div>
+      <br />
+      <div id="meaningDiv">
+        <h2 id="meaningHeader"></h2>
+        <br />
+        <ul id="meaningText" style="padding-left: 1pc"></ul>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Created by
+        <a
+          href="https://cipherrave.github.io"
+          style="all: unset; cursor: pointer"
+          >cipherrave</a
+        >
+      </p>
     </div>
   </body>
 </html>

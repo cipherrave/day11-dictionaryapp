@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -10,29 +9,98 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2pc;
+  margin-bottom: 2pc;
+  flex-wrap: wrap;
+  gap: 1pc;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: fit-content;
-  min-height: 5pc;
-  border: black solid 1px;
-  border-radius: 10px;
-  padding: 2pc;
-  gap: 2pc;
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+  --color-signal: #fab700;
+  --color-accent: #fab700;
+
+  --size-bezel: 0.5rem;
+  --size-radius: 4px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  color: var(--color-text);
+  background: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 900;
+}
+
+p {
+  line-height: 1.5;
+  text-justify: distribute;
+}
+
+.card {
+  width: 500px;
+  background: var(--color-background);
+  padding: calc(4 * var(--size-bezel));
+  margin-top: calc(4 * var(--size-bezel));
+  border-radius: var(--size-radius);
+  border: 3px solid var(--color-shadow, currentColor);
+  box-shadow: 0.5rem 0.5rem 0 var(--color-shadow, currentColor);
+}
+
+.solidline {
+  border-top: 1px solid grey;
+}
+
+.footer {
+  width: 500px;
+  padding: 1pc;
+  text-align: start;
+}
+
+.l-design-widht {
+  max-width: 40rem;
+  padding: 1rem;
 }
 
 .searchInput {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  gap: 0.5pc;
 }
 
-li {
+input {
   all: unset;
+  box-sizing: border-box;
+  width: 100%;
+  border: 3px solid;
+  padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+  background: transparent;
+  border-radius: var(--size-radius);
+}
+
+button {
+  color: currentColor;
+  padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--size-radius);
+  font-weight: 900;
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  list-style-position: outside;
 }
